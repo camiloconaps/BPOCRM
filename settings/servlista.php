@@ -12,7 +12,7 @@ $(document).ready(function() {
             <tr>
                 <th>Nombre</th>
                 <th>Fecha Creación</th>
-                <th>Campañas</th>
+                <th>Empresa</th>
                 <th>Estado</th>
                 <th>Desc</th>
             </tr>
@@ -27,8 +27,8 @@ $(document).ready(function() {
 					<td>2018/04/12</td>
 					<td>4</td>
 					<td>
-						<a href="javascript:;" class="btn btn-small btn-danger">
-							<i class="btn-icon-only icon-remove"></i>
+						<a href="javascript:;" class="btn btn-small btn-success">
+							<i class="btn-icon-only icon-ok"></i>
 						</a>
 					</td>
 					<td>Desc 1</td>
@@ -40,7 +40,7 @@ $(document).ready(function() {
             <tr>
                 <th>Nombre</th>
                 <th>Fecha Creación</th>
-                <th>Campañas</th>
+                <th>Empresa</th>
                 <th>Estado</th>
                 <th>Desc</th>
             </tr>
