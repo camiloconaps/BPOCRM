@@ -8,20 +8,39 @@
     
     <meta name="layout" content="main"/>
     
-    <script type="text/javascript" src="http://www.google.com/jsapi"></script>
+    <script type="text/jñ8avascript" src="http://www.google.com/jsapi"></script>
 
     <script src="../js/jquery/jquery-1.8.2.min.js" type="text/javascript" ></script>
-    <link href="../css/customize-template.css" type="text/css" media="screen, projection" rel="stylesheet" />
+    <link href="../css/customize-templateContact.css" type="text/css" media="screen, projection" rel="stylesheet" />
 
     <style>
         #body-content { padding-top: 40px;}
     </style>
+	<script>
+		$( document ).ready(function() {
+			$('#workm3').load('modulo.php');
+		});
+		function workarea(area,page){
+			$('#worka'+area).load(page+'.php');
+		}
+		
+		function modDiv(area,page){
+				
+				if( $('#modulo_n').is(":visible") ){
+					$('#modulo_n').hide('');
+				}else{
+					$('#modulo_n').show('');
+				}
+			
+		}
+	
+	</script>
 </head>
     <body>
         <div class="navbar navbar-fixed-top">
             <div class="navbar-inner">
                 <div class="container">
-                    <button class="btn btn-navbar" data-toggle="collapse" data-target="#app-nav-top-bar">
+                    <bñ8utton class="btn btn-navbar" data-toggle="collapse" data-target="#app-nav-top-bar">
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
@@ -46,32 +65,32 @@
                         <div class="container">
                             <ul>
                                 <li>
-                                    <a href="#">
+                                    <a href="#" onclick="workarea('1','basic');">
                                         <i class="icon-dashboard icon-large"></i> Info. Básica
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="#">
+                                    <a href="#" onclick="workarea('1','guion');">
                                         <i class="icon-list-alt icon-large"></i> Guión
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="#">
+                                    <a href="#" onclick="workarea('1','hist');">
                                         <i class="icon-upload icon-large"></i> Hist. Cliente
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="#">
+                                    <a href="#" onclick="workarea('1','tipif');">
                                         <i class="icon-tasks icon-large"></i> Tipif
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="#">
+                                    <a href="#" onclick="modDiv('3','modulo');">
                                         <i class="icon-th icon-large"></i> Módulo
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="#">
+                                    <a href="#" onclick="workarea('1','encuesta');">
                                         <i class="icon-list icon-large"></i> Encuesta
                                     </a>
                                 </li>
@@ -83,32 +102,32 @@
                         <div class="container">
                             <ul>
                                 <li>
-                                    <a href="#">
+                                    <a href="#" onclick="workarea('2','basic');">
                                         <i class="icon-dashboard icon-large"></i> Info. Básica
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="#">
+                                    <a href="#" onclick="workarea('2','guion');">
                                         <i class="icon-list-alt icon-large"></i> Guión
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="#">
+                                    <a href="#" onclick="workarea('2','hist');">
                                         <i class="icon-upload icon-large"></i> Hist. Cliente
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="#">
+                                    <a href="#" onclick="workarea('2','tipif');">
                                         <i class="icon-tasks icon-large"></i> Tipif
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="#">
+                                    <a href="#" onclick="modDiv('3','modulo');">
                                         <i class="icon-th icon-large"></i> Módulo
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="#">
+                                    <a href="#" onclick="workarea('2','encuesta');">
                                         <i class="icon-list icon-large"></i> Encuesta
                                     </a>
                                 </li>
@@ -147,78 +166,36 @@
             
             <div class="span16">
                 <div class="row">
-                    <div class="span8">
+                    <div class="span16" id="modulo_n" style="display:none;">
                         <div class="box">
                             <div class="box-header">
                                 <i class="icon-bar-chart"></i>
-                                <h5>Tablero 1</h5>
+                                <h5>Module</h5>
                             </div>
                             <div class="box-content">
-                                <div id="piechart"></div>
+                                <div id="workm3"></div>
+                            </div>
+                        </div>
+                    </div>
+					<div class="span8">
+                        <div class="box">
+                            <div class="box-header">
+                                <i class="icon-bar-chart"></i>
+                                <h5>Work Area 1</h5>
+                            </div>
+                            <div class="box-content">
+                                <div id="worka1"></div>
                             </div>
                         </div>
                     </div>
                     <div class="span8">
-                        <div class="box pattern pattern-sandstone">
+                        <div class="box">
                             <div class="box-header">
-                                <i class="icon-table"></i>
-                                <h5>
-                                    Tablero 2
-                                </h5>
+                                <i class="icon-bar-chart"></i>
+                                <h5>Work Area 2</h5>
                             </div>
-                            <div class="box-content box-table">
-                                <table id="sample-table" class="table table-hover table-bordered tablesorter">
-                                    <thead>
-                                        <tr>
-                                            <th>Servicio</th>
-                                            <th class="td-actions">Estado</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td>Avantel Outbound</td>
-                                            <td class="td-actions">
-                                                <a href="javascript:;" class="btn btn-small btn-info">
-                                                    <i class="btn-icon-only icon-ok"></i>
-                                                </a>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>Avantel Inbound</td>
-                                            <td class="td-actions">
-                                                <a href="javascript:;" class="btn btn-small btn-danger">
-                                                    <i class="btn-icon-only icon-remove"></i>
-                                                </a>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>Avantel</td>
-                                            <td class="td-actions">
-                                                <a href="javascript:;" class="btn btn-small btn-danger">
-                                                    <i class="btn-icon-only icon-remove"></i>
-                                                </a>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>Avantel 2</td>
-                                            <td class="td-actions">
-                                                <a href="javascript:;" class="btn btn-small btn-info">
-                                                    <i class="btn-icon-only icon-ok"></i>
-                                                </a>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>Avantel 3</td>
-                                            <td class="td-actions">
-                                                <a href="javascript:;" class="btn btn-small btn-info">
-                                                    <i class="btn-icon-only icon-ok"></i>
-                                                </a>
-                                            </td>
-                                        </tr>
-										
-									</tbody>
-                                </table>
-                            </div>
+                            <div class="box-content" id="worka2" class="form-group">
+							</div>
                         </div>
                     </div>
                 </div>
