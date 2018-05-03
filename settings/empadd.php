@@ -4,26 +4,25 @@
 	</div>
 	<div class='box-body'>
 
-	<form id="po_form" role="form" autocomplete="off">
+	<form id="add_emp" role="form" autocomplete="off">
 		<div class="row">
-		<div class="span12">
-			<div class="col-md-3">
-				<label for="po_number">Nombre:</label>
-			</div>
-			<div class="col-md-3">
+			<div class="span12">
+			
+				<label for="name_emp">Nombre:</label>
+			
 				<div class="form-group has-feedback">
-					<input type="text" name="po_number" id="po_number" class="form-control">
+					<input type="text" name="name_emp" id="name_emp" class="form-control">
 				</div>
-			</div>
-			<div class="col-md-3">
-				<label for="po_number">Fecha Creación:</label>
-			</div>
-			<div class="col-md-3">
+			
+				<label for="desc_emp">Descripción:</label>
+			
 				<div class="form-group has-feedback">
-					<input type="date" name="po_number" id="po_number" class="form-control">
+				<textarea  id="desc_emp" rows="4" cols="8"></textarea>
 				</div>
+				<a href="javascript:;" class="btn btn-small btn-success" onclick="add_emp();">
+							<i class="btn-icon-only icon-add"> + Adicionar</i>
+						</a>
 			</div>
-		</div>
 		</div>
 	</form>
 	</div>	

@@ -23,6 +23,21 @@
 	function atras(){
 		$('#contenidos').load(page+'.php');
 	}
+	function add_emp(){
+		var name = $('#name_emp').val();
+		var desc = $('#desc_emp').val();
+		$.ajax({
+		type: 'post',
+		url: 'saveEmp.php',
+		data: {
+			name_n: name,
+			desc_n: desc,
+		},
+		dataType: 'json',
+	}).done(function(result){
+		alert(result);
+	});
+	}
 	</script>
 </head>
     <body>
