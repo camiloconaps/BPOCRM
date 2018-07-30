@@ -15,6 +15,7 @@ $(document).ready(function() {
                 <th>Empresa</th>
                 <th>Estado</th>
                 <th>Desc</th>
+				<th>Guión</th>
             </tr>
         </thead>
         <tbody>
@@ -39,6 +40,7 @@ $(document).ready(function() {
 						
 				echo '</td>
 					<td>'.$row['descripcion'].'</td>
+					<td><button  onclick="cargarGuion('.$row['id_serv'].')">Guión</button></td>
 				</tr>';
 			}?>
             
@@ -50,6 +52,7 @@ $(document).ready(function() {
                 <th>Empresa</th>
                 <th>Estado</th>
                 <th>Desc</th>
+				<th>Guión</th>
             </tr>
         </tfoot>
     </table>

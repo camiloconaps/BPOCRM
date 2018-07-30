@@ -1,3 +1,6 @@
+<?php 
+	require_once('../src/connect.php'); 
+?>
 <form class="form-horizontal">
   <div class="table-responsive">
     <table class="table table-bordered table-striped table-highlight">
@@ -6,7 +9,19 @@
 		</thead>
 		  <tbody>
 			<tr>
-				<td>Viendo el Top 5 de eléctricos en Colombia, me doy cuenta que este país aun le falta avanzar, empezando porque no hay variedad de autos. En otros Paises Se vende mucho los de gama baja como: el Nissan leaf 2g, Renault Zoe. Gama Alta: Jaguar i pace, Audi e tron, Nissan Xmotion y Los Tesla y otros.</td>
+				<td>
+				
+				<!-- Buenas tardes. me comunico con el señor tal. del servicio <?php echo $_GET['serv']?> -->
+				
+				<?php
+				$sql = "SELECT guion FROM crmpa_guiones where idserv=".$_GET['serv'];
+				
+				foreach($pdo->query($sql) as $row){
+					echo $row['guion'];
+				}
+				?>
+				
+				</td>
 			</tr>
 		  </tbody>
     </table>

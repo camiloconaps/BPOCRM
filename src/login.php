@@ -28,9 +28,9 @@ if(isset($_POST['user']) && isset($_POST['pass'])){
 				if($row2['id_perfil'] == '1'){
 					header('location: ../settings/control.html');
 				} else if($row2['id_perfil'] == '2'){
-					header('location: ../contact/control.html');
+					header('location: ../contact/control.php');
 				} else {
-					header('location: ../contact/control.html');
+					header('location: ../back/control.php');
 				}
 			} else {
 				header('location: ../index.php?error_login=3');

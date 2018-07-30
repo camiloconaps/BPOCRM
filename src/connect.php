@@ -1,6 +1,9 @@
 <?php
 //Valida la conexión de base de datos
 try {
+	/*$dsn = 'mysql:host=172.246.126.64;dbname=crm_bpo';
+	$nombre_usuario = 'root';
+	$contraseña = 'Aur4N01r3*Sm4rtS0lut10nS3rv1c3';*/
 	$dsn = 'mysql:host=localhost;dbname=crm_bpo';
 	$nombre_usuario = 'root';
 	$contraseña = '';

@@ -1,3 +1,6 @@
+<?php 
+	require_once('../src/connect.php'); 
+?>
 <form class="form-horizontal">
   <div class="table-responsive">
     <table class="table table-bordered table-striped table-highlight">
@@ -14,11 +17,17 @@
 			</tr>
 		</thead>
       <tbody>
-        <tr>
-			<td>2018/04/02</td>
-			<td>Venta</td>
-			<td>Mario Diaz</td>
-		</tr>
+	  
+	  <?php
+				$sql = "SELECT fec_fin,calif,nombre,apellido FROM crmpa_calificaciones A inner join crmpa_usuarios B on A.id_agente=B.id where id_serv=".$_GET['serv']." and id_cl=".$_GET['cl'];
+				foreach($pdo->query($sql) as $row){
+					echo "<tr>
+						<td>".$row['fec_fin']."</td>
+						<td>".$row['calif']."</td>
+						<td>".$row['nombre']." ".$row['apellido']."</td>
+					</tr>";
+				}
+				?>
       </tbody>
     </table>
   </div>
